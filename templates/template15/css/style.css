@@ -4962,12 +4962,11 @@ img {
 }
 
 .couple-section .details ul a {
-  font-size: 14px;
-  font-size: 0.93333rem;
+  font-size: 16px;
   line-height: 0.93333rem;
   color: #c89d9c;
   background: #fff;
-  padding: 5px;
+  padding: 10px;
   border-radius: 50%;
   border: 1px solid #ede2e2;
   display: block;
