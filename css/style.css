@@ -42,44 +42,97 @@ footer {
 } */
 
 form {
-    position: relative;
-    z-index: 99;
+  position: relative;
+  z-index: 99;
 }
 
-input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
-.music-player {
+/* music */
+
+.menu-music {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
+    bottom: 70px;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    z-index: 100000;
 }
-.play-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+
+@media screen and (max-width: 799px) {
+    .menu-music {
+        bottom: 30px;
+        left: 20px;
+    }
+}
+
+.player-content {
+    position: absolute;
+    width: 310px;
+    left: 25px;
+    height: 50px;
+    overflow: hidden;
+    opacity: 1; /* Ban đầu hiện */
+    transition: opacity 0.5s ease; /* Hiệu ứng mượt */
+}
+
+.player-title {
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+    user-select: none;
+    position: absolute;
+    width: 310px;
+    left: -25px;
+    background: #fff;
+    height: 40px;
+    padding: 8px 11px 8px 50px;
+    border: 1px solid #df4759;
+    border-radius: 30px;
+    z-index: 1;
+    font-size: 14px;
+    transform: translate3d(0, 0, 0); /* Hiện full */
+    transition: transform 175ms ease;
+    font-family: arial;
+    font-weight: 200;
+    color: #000;
 }
-.play-button:hover {
-    background-color: #45a049;
+
+.player-icon {
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #df4758;
+    padding-top: 7px;
+    padding-left: 9px;
+    position: absolute;
+    z-index: 2;
+}
+
+.playeron {
+    display: none;
+}
+
+.playeroff {
+    display: block;
 }
